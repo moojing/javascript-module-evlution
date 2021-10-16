@@ -9,20 +9,28 @@
 
     
     <script>
-        var name = "John" 
-        function doSomeThing () {
-            console.log(`Hello, it's ${name} here.`) 
-        } 
+        // var name = "John" 
+        // function greeting () {
+        //     console.log(`Hello, it's ${name} here.`) 
+        // } 
     </script>
 
     <script> 
         // ...
-        var name = "Mujing" 
-        function doSomeThing () {
-            console.log(`Yo, it's ${name} here.`) 
-        }
+        const user = (function (){
+
+            var name = "Mujing"; 
+            return {
+                greeting: function greeting () {
+                    console.log(`Yo, it's ${name} here.`) 
+                }
+            }
+            
+        })()
         
-        doSomeThing() // Yo, it's Mujing here.
+        // console.log('user.name',user.name )
+        // 
+        console.log('user.greeting',user.greeting() )
     </script>
   
 </body>
