@@ -7,33 +7,7 @@
 </head>
 <body>
 
-    
-    <script>
-        (function () {
-            // 將模組程式碼寫在 IIFE 內
-        })();
-    </script>
-
-    <script> 
-        // ...
-        var getUser = (name,birthday) => (function (){
-            var age = Math.floor((Date.now() - new Date(birthday).getTime())/1000/60/60/24/365);
-            return {
-                name,
-                age: Math.floor(age),
-                greeting: function greeting () {
-                    console.log(`Hello, it's ${name} here. I'm ${age} years old.`) 
-                }
-            }
-
-        })()
-
-
-        var user1 = getUser('Mujing', '1995/01/04') 
-        user1.greeting() //Hello, it's Mujing here. I'm 26 years old.
-        
-        
-    </script>
-  
+ 
+    <script src="./utils/require.js" data-main="./module/index.js"  > </script>
 </body>
 </html>
